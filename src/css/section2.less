@@ -1,26 +1,39 @@
+@import "smart-grid.less";
+@import "base.less";
+
 .wrap2{
-  max-width: 960px;
+  max-width: @break_md;
   margin: 0 auto;
   height: 100%;
-  padding: 0 5px;
+  padding: 0 @m;
   overflow: hidden;
-  display: flex;
-  flex-wrap: wrap;
+  .row-flex();
   justify-content: center;
 }
 
 section.profit2{
-  background: #232324;
-  padding: 15px 0;
+  background: @color_grey;
+  padding: @offset_one_side 0;
 }
 
 section.profit2 .item2{
-  border: 3px solid #fff;
-  background: #fff;
+  border: @s solid @color_lgrey;
+  background: @color_lgrey;
   text-align: center;
 }
 
 section.profit2 .item2.text2{
   font-style: italic;
   text-align: left;
+}
+
+.item2{
+  text-align: center;
+  margin: @offset_one_side;
+  .col();
+  .col-ib();
+  .size(6);
+  .size(10);
+  .size(12);
+  .size(24);
 }
